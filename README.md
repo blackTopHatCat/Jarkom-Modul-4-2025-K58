@@ -8,7 +8,8 @@ Things to do/watchout for:
 1. Firstly, map the demanded host, net mask, net addr, usable ip range, and broadcast addr of every subnet to a spreadsheet.
 2. Supernet it from either top/bottom, NOT MIDDLE.
 3. Draw the supernet as a tree or whatever you fancy to help visualize.
-4. Router subnets dont have to be combined with host subnet one by one, eg. here A1 -> A2 -> A3 -> Internet:
+4. Use subnetmask table with its binary representation included too.
+5. Router subnets dont have to be combined with host subnet one by one, eg. here A1 -> A2 -> A3 -> Internet:
 
 ```
 Host subnet: A1
@@ -22,7 +23,7 @@ NOT: B1 = A1, A2; B2 = B1, A3
 
 4. Careful with routing's prefix assignment and its matching subnet, eg. if B1 is 192.240.0.0/22, then B2 must be started from 192.240.4.0/22 or higher. This extends into supernet's calculation process where it must pay attention to prev supernet for same reason.
 
-6. In a supernet, subnets goes contiguously (means addr of one subnet continues to other subnet like a chained link)
+6. In a supernet, subnets goes contiguously (means addr of one subnet continues to other subnet like a chained link).
 
 ```
 A1: 192.240.0.128/25
